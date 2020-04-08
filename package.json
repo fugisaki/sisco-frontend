@@ -15,8 +15,16 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": ["eslint --fix", "git add"]
+  },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,5 +43,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.13.0",
+    "babel-plugin-root-import": "^6.5.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import-helpers": "^1.0.2",
+    "eslint-plugin-react": "^7.19.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.2"
   }
 }
